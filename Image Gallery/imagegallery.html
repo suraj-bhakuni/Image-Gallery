@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image-Gallery</title>
+    <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css?family=Poppins">
+</head>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    #wrapper{
+        height: 100vh;
+        overflow-x: hidden;
+        overflow-y: auto;
+
+    }
+    .container{
+        height: 100%;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 20px;
+
+    }
+    h1{
+        text-align: center;
+        font-size: 40px;
+        color: #333333;
+        margin: 20px 100px;
+        /* margin-bottom: 20px; */
+        font-family: Poppins;
+        font-weight:bold;
+    }
+    .gallery{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    #pics{
+        width: 32%;
+        position: relative;      /*bcz text will overlap above images*/
+        margin-bottom: 20px;
+        border-radius: 10px;
+        overflow: hidden;        /*bcz image size is greater than pics(id)*/
+    }
+    img{
+        width: 100%;
+        height: 100%;
+        filter: grayscale(100%);
+        box-shadow: 0 0 20px #333;
+        object-fit: cover;
+    }
+    #pics:hover{
+        transform: scale(1.03);
+        transition:0.4s;
+        filter: drop-shadow(0 0 10px #333);   /* Use for shadow effect on hovering and can also be acheived by box-shadow */
+    }
+    img:hover{
+        filter: grayscale(0%);
+    }
+    figcaption{
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 20%;
+        font-size: 16px;
+        padding: 25px;
+        color: white;
+        font-weight: 500;
+        font-family: poppins;
+        background:linear-gradient(0deg,rgba(0,0,0,0.5));
+        opacity: 0;
+    }
+    #pics:hover figcaption{
+        opacity: 1;
+        transform: scale(1.03);
+    }
+</style>
+<body>
+
+    <div id="wrapper">
+        <div class="container">
+            <h1>My Gallery</h1>
+            <div class="gallery">
+                <figure id="pics">
+                    <img src="image1.jpg" alt="img1">
+                    <figcaption>image1</figcaption>
+                </figure>
+                <figure id="pics">
+                    <img src="image2.jpeg" alt="img1">
+                    <figcaption>image2</figcaption>
+                </figure>
+                <figure  id="pics">
+                    <img src="image3.jpeg" alt="img1">
+                    <figcaption>image3</figcaption>
+                </figure>
+                <figure  id="pics">
+                    <img src="image4.jpeg" alt="img1">
+                    <figcaption>image4</figcaption>
+                </figure>
+                <figure  id="pics">
+                    <img src="image5.jpeg" alt="img1">
+                    <figcaption>image5</figcaption>
+                </figure>
+                <figure  id="pics">
+                    <img src="image6.jpeg" alt="img1">
+                    <figcaption>image6</figcaption>
+                </figure>
+                <figure  id="pics">
+                    <img src="image7.jpeg" alt="img1">
+                    <figcaption>image7</figcaption>
+                </figure>
+                <figure  id="pics">
+                    <img src="image8.jpeg" alt="img1">
+                    <figcaption>image8</figcaption>
+                </figure>
+                <figure  id="pics">
+                    <img src="image9.jpeg" alt="img1">
+                    <figcaption>image9</figcaption>
+                </figure>
+            </div>
+        </div>
+    </div>
+    
+</body>
+</html>
